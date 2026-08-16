@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+
+/*
+  Tokens extraídos da landing do Claude Design.
+  Tailwind v4 é CSS-first: tudo que estiver em @theme vira utilitário
+  automaticamente (--color-accent -> bg-accent, text-accent, border-accent...).
+*/
+@theme {
+  /* Paleta */
+  --color-bg: oklch(0.16 0.006 165);
+  --color-surface: oklch(0.19 0.008 165);
+  --color-surface-2: oklch(0.22 0.01 165);
+  --color-line: oklch(0.3 0.012 165);
+  --color-fg: oklch(0.95 0.006 165);
+  --color-muted: oklch(0.74 0.012 165);
+  --color-subtle: oklch(0.62 0.012 165);
+  --color-accent: oklch(0.82 0.15 158);
+  --color-accent-strong: oklch(0.9 0.12 158);
+
+  /* Tipografia — injetada por next/font no <html> */
+  --font-display: var(--font-space-grotesk), 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, 'SFMono-Regular', monospace;
+
+  /* Largura de leitura */
+  --spacing-shell: 64rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-display);
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+  }
+
+  /* Foco visível em tudo que é focável — o export original zerava o outline. */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@utility eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
