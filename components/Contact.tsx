@@ -30,7 +30,7 @@ export default function Contact({ t }: { t: Dict }) {
   const links = [
     { label: 'LinkedIn', value: '/in/joao-wictor', href: site.linkedin },
     { label: 'GitHub', value: '@jwictor', href: site.github },
-    { label: 'Instagram', value: '@jwictor', href: site.instagram },
+    { label: 'Instagram', value: '@j.wictorr', href: site.instagram },
     { label: 'E-mail', value: site.email, href: `mailto:${site.email}` },
   ];
 
