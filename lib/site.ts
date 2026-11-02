@@ -5,7 +5,7 @@ export const site = {
   // do Cloudflare estiver configurado (grátis, encaminha para o Gmail).
   email: 'joaowictoroliveira3301@gmail.com',
   linkedin: 'https://www.linkedin.com/in/joao-wictor/',
-  instagram: 'https://instagram.com/jwictor',
+  instagram: 'https://www.instagram.com/j.wictorr',
   github: 'https://github.com/jwictor',
   // TODO: subir o PDF em /public/curriculo-joao-wictor.pdf
   cv: '/curriculo-joao-wictor.pdf',

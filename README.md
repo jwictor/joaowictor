@@ -17,7 +17,7 @@ npm run build   # gera ./out
 - [ ] `content/projects.ts` → `bontrack` — trocar o link do `pages.dev` pelo domínio final se o cliente fechar
 - [ ] `public/curriculo-joao-wictor.pdf`
 - [ ] `lib/site.ts` → `email` — trocar pelo `contato@joaowictor.com.br`
-- [ ] Conferir se o handle do Instagram é mesmo `@jwictor`
+- [x] Conferir se o handle do Instagram é mesmo `@j.wictorr`
 
 ## Estrutura
 
